@@ -6,11 +6,11 @@
 /*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 12:17:29 by ael-maar          #+#    #+#             */
-/*   Updated: 2022/10/25 16:26:32 by ael-maar         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:00:38 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_write(char c, int *count)
 {

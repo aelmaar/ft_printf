@@ -6,24 +6,26 @@
 /*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 16:31:38 by ael-maar          #+#    #+#             */
-/*   Updated: 2022/10/25 18:38:11 by ael-maar         ###   ########.fr       */
+/*   Updated: 2022/10/27 11:36:14 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-void	ft_putptr(void *p, size_t size, int *count)
+static void	ft_puthexa_long(unsigned long n, int *count)
 {
-	size_t			i;
-	unsigned char	*p_cast;
-
-	p_cast = p;
-	i = 0;
-	ft_putstr("0x", count);
-	while (i < size)
+	if (n >= 16)
 	{
-		if (p_cast[i] > 0)
-			ft_puthex(p_cast[i], 'x', count);
-		i++;
+		ft_puthexa_long(n / 16, count);
 	}
+	ft_putchar("0123456789abcdef"[n % 16], count);
+}
+
+void	ft_putptr(unsigned long p, int *count)
+{
+	ft_putstr("0x", count);
+	if (p < 16)
+		ft_putchar("0123456789abcdef"[p], count);
+	else
+		ft_puthexa_long(p, count);
 }

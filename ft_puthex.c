@@ -6,15 +6,15 @@
 /*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:13:30 by ael-maar          #+#    #+#             */
-/*   Updated: 2022/10/25 17:15:19 by ael-maar         ###   ########.fr       */
+/*   Updated: 2022/10/26 18:52:04 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static void	ft_hex(unsigned int n, char *hex, int *count)
 {
-	if (n > 16)
+	if (n >= 16)
 	{
 		ft_hex(n / 16, hex, count);
 	}

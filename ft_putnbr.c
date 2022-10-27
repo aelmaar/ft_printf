@@ -6,11 +6,11 @@
 /*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 12:24:18 by ael-maar          #+#    #+#             */
-/*   Updated: 2022/10/25 16:26:42 by ael-maar         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:00:21 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr(int n, int *count)
 {
